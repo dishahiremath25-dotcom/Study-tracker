@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JAM 2027 • Study HQ</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="auth" class="auth"><div class="auth-card"><div class="logo">J7</div><h1>JAM 2027 Study HQ</h1><p>One tracker across Windows, Mac and iPad.</p>
+<button id="googleBtn" class="primary full">Sign in with Google</button><div class="or">or</div>
+<form id="emailForm"><input id="email" type="email" placeholder="Email" required><input id="password" type="password" placeholder="Password" required minlength="6"><button class="secondary full">Sign in / Create account</button></form>
+<small id="authMsg"></small></div></div>
+<div id="app" class="hidden"><aside><div class="brand"><div class="logo">J7</div><b>JAM 2027</b><small>Study HQ</small></div>
+<nav><button class="nav active" data-page="dashboard">⌂ Dashboard</button><button class="nav" data-page="topics">▦ Syllabus</button><button class="nav" data-page="study">◷ Study log</button><button class="nav" data-page="tests">✓ Topic tests</button><button class="nav" data-page="revisions">↻ Revisions</button><button class="nav" data-page="analytics">◈ Analytics</button></nav>
+<div class="account"><span id="userEmail"></span><button id="signout">Sign out</button></div></aside>
+<main><header><div><span class="eyebrow">IIT JAM Biotechnology</span><h1 id="title">Dashboard</h1></div><button id="sync" class="sync">☁ Sync</button></header>
+<section id="dashboard" class="page active"><div class="hero"><div><span class="pill">JAM BT 2027</span><h2>Study with data. Revise with purpose.</h2><p>Your cross-device preparation command centre.</p></div><div class="ring"><strong id="overall">0%</strong><span>mastery</span></div></div>
+<div class="cards" id="kpis"></div><div class="grid"><div class="panel"><h3>Subject mastery</h3><div id="subjects"></div></div><div class="panel"><h3>Today's priorities</h3><div id="priorities"></div></div></div></section>
+<section id="topics" class="page"><div class="toolbar"><div><h2>Syllabus tracker</h2><p>Track every chapter and subtopic.</p></div><button class="primary" id="addTopic">+ Add topic</button></div><div class="filters"><select id="sf"><option>All subjects</option></select><select id="mf"><option>All mastery</option><option>Not started</option><option>Learning</option><option>Practiced</option><option>Strong</option><option>Exam ready</option></select></div><div class="table-wrap"><table><thead><tr><th>Subject</th><th>Topic</th><th>Mastery</th><th>Hours</th><th>Tests</th><th>Avg</th><th>Revisions</th><th></th></tr></thead><tbody id="topicRows"></tbody></table></div></section>
+<section id="study" class="page"><div class="toolbar"><div><h2>Study log</h2><p>Log focused work and build your streak.</p></div><button class="primary" id="addStudy">+ Log session</button></div><div class="cards" id="studyCards"></div><div class="table-wrap"><table><thead><tr><th>Date</th><th>Subject</th><th>Topic</th><th>Hours</th><th>Type</th><th></th></tr></thead><tbody id="studyRows"></tbody></table></div></section>
+<section id="tests" class="page"><div class="toolbar"><div><h2>Topic tests</h2><p>Measure whether learning is converting into marks.</p></div><button class="primary" id="addTest">+ Add test</button></div><div class="cards" id="testCards"></div><div class="table-wrap"><table><thead><tr><th>Date</th><th>Subject</th><th>Topic</th><th>Questions</th><th>Score</th><th>%</th><th>Attempt</th><th></th></tr></thead><tbody id="testRows"></tbody></table></div></section>
+<section id="revisions" class="page"><div class="toolbar"><div><h2>Revision tracker</h2><p>Never let completed topics become forgotten topics.</p></div><button class="primary" id="addRevision">+ Record revision</button></div><div class="table-wrap"><table><thead><tr><th>Subject</th><th>Topic</th><th>Revision #</th><th>Date</th><th>Next revision</th><th></th></tr></thead><tbody id="revRows"></tbody></table></div></section>
+<section id="analytics" class="page"><div class="toolbar"><div><h2>Analytics</h2><p>See where your time and marks are going.</p></div></div><div class="grid"><div class="panel"><h3>Hours by subject</h3><div id="hoursChart"></div></div><div class="panel"><h3>Test performance by subject</h3><div id="scoreChart"></div></div></div></section>
+</main></div>
+<div id="modal" class="modal"><div class="modal-box"><div class="modal-head"><h3 id="mt">Add</h3><button id="close">×</button></div><form id="form"></form></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
+</body></html>
